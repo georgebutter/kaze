@@ -1,4 +1,5 @@
 import "../style/output.css";
+import { Kaze } from "../src/providers/Kaze";
 import theme from "../style/kaze/index";
 
 export const parameters = {
@@ -10,3 +11,11 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <Kaze theme={theme}>
+      <Story />
+    </Kaze>
+  )
+]
