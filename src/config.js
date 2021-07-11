@@ -5,6 +5,13 @@ module.exports.kaze = (config) => {
     darkMode: false,
     theme: {
       extend: {
+        flexGrow: {
+          '999': '999',
+        },
+        minWidth: {
+          '1/2': '50%',
+          '3/4': '75%',
+        },
       },
     },
     variants: {

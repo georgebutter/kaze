@@ -4,6 +4,7 @@ export type KazeTheme = {
     Center?: KazeThemeComponent
     Cluster?: KazeThemeComponent
     HStack?: KazeThemeComponent
+    Sidebar?: KazeThemeComponent
     VStack?: KazeThemeComponent
   }
 }
