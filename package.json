@@ -1,5 +1,5 @@
 {
-  "name": "kaze",
+  "name": "@kaze/react",
   "version": "0.0.1",
   "description": "React tailwind UI components",
   "main": "dist/index.js",
