@@ -1,15 +1,14 @@
 import * as React from 'react';
 import {KazeContext} from '../../providers/Kaze';
 
-export const SidebarContainer: React.FC<Props> = ({
-  children, className, gap = 0,
+export const SidebarSide: React.FC<Props> = ({
+  children, className,
 }) => {
   const {theme} = React.useContext(KazeContext);
-  const base = `flex flex-wrap gap-${gap}`;
   return (
-    <div className={`${theme.components.Sidebar?.base || ''} ${className || ''} ${base}`}>
+    <aside className={`${theme.components.SidebarSide?.base || ''} ${className || ''} flex-grow`}>
       {children}
-    </div>
+    </aside>
   );
 };
 
@@ -17,4 +16,5 @@ type Props = {
   className?: string;
   gap?: number
   minWidth?: string;
+  reverse?: boolean;
 }
