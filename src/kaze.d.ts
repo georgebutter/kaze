@@ -3,6 +3,7 @@ export type KazeTheme = {
     Box?: KazeThemeComponent
     Center?: KazeThemeComponent
     Cluster?: KazeThemeComponent
+    Cover?: KazeThemeComponent
     HStack?: KazeThemeComponent
     Sidebar?: KazeThemeComponent
     SidebarMain?: KazeThemeComponent

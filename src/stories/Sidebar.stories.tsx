@@ -14,16 +14,16 @@ export default {
 
 
 const SidebarStory: ComponentStory<typeof SidebarComponent> = (args) => (
-  <SidebarStory {...args}>
-    <SidebarSide className="px-2 bg-red-300">
+  <SidebarComponent {...args}>
+    <SidebarSide>
       <h3 className="font-semibold">Sidebar Side</h3>
       <p>This is the sidebar side.</p>
     </SidebarSide>
-    <SidebarMain className="px-2 bg-purple-300" minWidth="3/4">
+    <SidebarMain minWidth="3/4">
       <h3 className="font-semibold">Sidebar Main</h3>
       <p>This is the sidebar main.</p>
     </SidebarMain>
-  </SidebarStory>
+  </SidebarComponent>
 );
 
 export const Sidebar = SidebarStory.bind({});

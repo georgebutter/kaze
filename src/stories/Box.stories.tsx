@@ -4,7 +4,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react';
 import {Box as BoxComponent} from '../layouts/Box';
 
 export default {
-  title: 'Layouts',
+  title: 'Layouts/Box',
   component: BoxComponent,
   argTypes: {
     padding: {

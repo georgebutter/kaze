@@ -6,7 +6,7 @@ import {VStack} from '../layouts/VStack';
 import {Box} from '../layouts/Box';
 
 export default {
-  title: 'Layouts',
+  title: 'Layouts/Center',
   component: CenterComponent,
   argTypes: {
     width: {

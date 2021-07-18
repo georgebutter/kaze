@@ -5,7 +5,7 @@ import {VStack as VStackComponent} from '../layouts/VStack';
 import {Box} from '../layouts/Box';
 
 export default {
-  title: 'Layouts',
+  title: 'Layouts/VStack',
   component: VStackComponent,
   argTypes: {
     space: {

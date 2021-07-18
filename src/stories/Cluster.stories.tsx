@@ -5,7 +5,7 @@ import {Cluster as ClusterComponent} from '../layouts/Cluster';
 import {Box} from '../layouts/Box';
 
 export default {
-  title: 'Layouts',
+  title: 'Layouts/Cluster',
   component: ClusterComponent,
   argTypes: {
   },

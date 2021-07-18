@@ -5,7 +5,7 @@ import {HStack as HStackComponent} from '../layouts/HStack';
 import {Box} from '../layouts/Box';
 
 export default {
-  title: 'Layouts',
+  title: 'Layouts/HStack',
   component: HStackComponent,
   argTypes: {
     space: {
