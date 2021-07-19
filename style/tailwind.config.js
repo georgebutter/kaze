@@ -1,4 +1,4 @@
-const {kaze} = require('../src/config');
+const {kaze} = require('../config');
 module.exports = kaze({
   purge: [],
   darkMode: false, // or 'media' or 'class'
