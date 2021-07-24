@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DefaultProps} from '../../kaze';
+import {DefaultProps, FlexAlignments, Spacings} from '../../kaze';
 import {KazeContext} from '../../providers/Kaze';
 
 /**
@@ -19,9 +19,8 @@ export const Cluster: React.FC<Props> = ({
 };
 
 type Props = DefaultProps & {
-  gap?: number;
-  justify?: Flex;
-  items?: Flex;
+  gap?: Spacings;
+  justify?: FlexAlignments;
+  items?: FlexAlignments;
 }
 
-type Flex = 'start' | 'center' | 'end';

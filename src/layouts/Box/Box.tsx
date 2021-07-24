@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DefaultProps} from '../../kaze';
+import {DefaultProps, Spacings} from '../../kaze';
 import {KazeContext} from '../../providers/Kaze';
 
 /**
@@ -21,10 +21,5 @@ export const Box: React.FC<Props> = ({
 };
 
 type Props = DefaultProps & {
-  /**
-   * The amount of horizontal spacing between elements in the stack.
-   * Value is based upon the tailwind config.
-   * Default is 0;
-   **/
-  padding?: number;
+  padding: Spacings
 }

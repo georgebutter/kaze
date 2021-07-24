@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DefaultProps} from '../../kaze';
+import {DefaultProps, MaxWidths, Spacings} from '../../kaze';
 import {KazeContext} from '../../providers/Kaze';
 
 export const Center: React.FC<Props> = ({
@@ -14,7 +14,7 @@ export const Center: React.FC<Props> = ({
 };
 
 type Props = DefaultProps & {
-  width?: string;
-  padding?: number;
+  width?: MaxWidths;
+  padding?: Spacings;
 }
 

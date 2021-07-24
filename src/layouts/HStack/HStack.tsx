@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DefaultProps} from '../../kaze';
+import {DefaultProps, GridCols} from '../../kaze';
 import {KazeContext} from '../../providers/Kaze';
 
 /**
@@ -24,5 +24,5 @@ type Props = DefaultProps & {
    * Value is based upon the tailwind config.
    * Default is 0;
    **/
-  space?: number;
+  space?: GridCols;
 }

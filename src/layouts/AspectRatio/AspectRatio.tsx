@@ -21,8 +21,24 @@ export const AspectRatio: React.FC<Props> = ({
 };
 
 type Props = DefaultProps & {
-  position?: string;
-  fit?: string;
-  w?: string;
-  h?: number;
+  position?:
+  'bottom' |
+  'center' |
+  'left' |
+  'left-bottom' |
+  'left-top' |
+  'right' |
+  'right-bottom' |
+  'right-top' |
+  'top';
+  fit?:
+  'contain' |
+  'cover' |
+  'fill' |
+  'none' |
+  'scale-down';
+  w?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16;
+  h?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16;
 }
+
+

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DefaultProps} from '../../kaze';
+import {DefaultProps, GridCols, Spacings} from '../../kaze';
 import {KazeContext} from '../../providers/Kaze';
 
 /**
@@ -28,6 +28,6 @@ type Props = DefaultProps & {
    * The grid-gap value i.e the spacing between grid items.
    * The value is as defined in your tailwind config.
    */
-  gap?: number;
-  cols?: string;
+  gap?: Spacings;
+  cols?: GridCols;
 }

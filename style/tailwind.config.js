@@ -1,6 +1,6 @@
 const {kaze} = require('../config');
 module.exports = kaze({
-  purge: [],
+  purge: ['./src/**/*.tsx', './style/kaze/**/*.ts'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -27,4 +27,3 @@ module.exports = kaze({
   },
   plugins: [],
 });
-
