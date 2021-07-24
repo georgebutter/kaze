@@ -1,20 +1,15 @@
 import * as React from 'react';
+import {DefaultProps} from '../../kaze';
 import {KazeContext} from '../../providers/Kaze';
 
 export const SidebarSide: React.FC<Props> = ({
-  children, className,
+  children, className, as = 'aside',
 }) => {
   const {theme} = React.useContext(KazeContext);
-  return (
-    <aside className={`${theme.components.SidebarSide?.base || ''} ${className || ''} flex-grow`}>
-      {children}
-    </aside>
-  );
+  const classes = `${theme.components.SidebarSide?.base || ''} ${className || ''} flex-grow`;
+  return React.createElement(as, {
+    className: classes,
+  }, children);
 };
 
-type Props = {
-  className?: string;
-  gap?: number
-  minWidth?: string;
-  reverse?: boolean;
-}
+type Props = DefaultProps

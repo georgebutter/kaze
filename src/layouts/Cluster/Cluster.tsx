@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {KazeContext} from '../providers/Kaze';
+import {DefaultProps} from '../../kaze';
+import {KazeContext} from '../../providers/Kaze';
 
 /**
  * Returns a Cluster component which allows elements to be displayed in a
@@ -7,27 +8,17 @@ import {KazeContext} from '../providers/Kaze';
  * @return {React.FC<Props>}
  */
 export const Cluster: React.FC<Props> = ({
-  children, className = '', gap = 0, items = 'start', justify = 'start',
+  children, className = '', gap = 0, items = 'start', justify = 'start', as = 'div',
 }) => {
   const {theme} = React.useContext(KazeContext);
   const base = `flex flex-wrap gap-${gap} items-${items} justify-${justify}`;
   const classes = `${theme.components.Cluster?.base || ''} ${className || ''} ${base}`;
-  return (
-    <div
-      className={classes}
-    >
-      {children}
-    </div>
-  );
+  return React.createElement(as, {
+    className: classes,
+  }, children);
 };
 
-type Props = {
-  /**
-   * Additional classNames to apply to the element,
-   * only use this prop if this is a one off scenario otherwise use the
-   * Kaze theme context.
-   */
-  className?: string;
+type Props = DefaultProps & {
   gap?: number;
   justify?: Flex;
   items?: Flex;

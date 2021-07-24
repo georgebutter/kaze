@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 
-import {HStack as HStackComponent} from '../layouts/HStack';
-import {Box} from '../layouts/Box';
+import {VStack as VStackComponent} from '../VStack/VStack';
+import {Box} from '../Box/Box';
 
 export default {
-  title: 'Layouts/HStack',
-  component: HStackComponent,
+  title: 'Layouts/VStack',
+  component: VStackComponent,
   argTypes: {
     space: {
       name: 'Space',
@@ -15,15 +15,15 @@ export default {
       defaultValue: 2,
     },
   },
-} as ComponentMeta<typeof HStackComponent>;
+} as ComponentMeta<typeof VStackComponent>;
 
 
-const HStackStory: ComponentStory<typeof HStackComponent> = (args) => (
-  <HStackComponent {...args} />
+const VStackStory: ComponentStory<typeof VStackComponent> = (args) => (
+  <VStackComponent {...args} />
 );
 
-export const HStack = HStackStory.bind({});
-HStack.args = {
+export const VStack = VStackStory.bind({});
+VStack.args = {
   children: (
     <>
       {[1, 2, 3, 4, 5].map((i) => (

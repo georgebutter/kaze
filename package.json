@@ -12,11 +12,11 @@
   ],
   "scripts": {
     "build:tailwind": "tailwindcss build -i style/tailwind.css -o style/output.css -c style/tailwind.config.js",
+    "build:storybook": "build-storybook",
     "build": "rollup -c",
     "test": "jest",
     "prestorybook": "npm run build:tailwind",
     "dev": "start-storybook -p 1337",
-    "build-storybook": "build-storybook",
     "prepublish": "npm run build"
   },
   "keywords": [
@@ -40,28 +40,41 @@
     "@storybook/addon-essentials": "^6.3.4",
     "@storybook/addon-links": "^6.3.4",
     "@storybook/react": "^6.3.4",
+    "@types/jest": "^24.0.24",
     "@types/lodash.merge": "^4.6.6",
+    "@types/react": "^16.9.12",
+    "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
     "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
     "eslint": "^7.30.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.24.0",
+    "html-webpack-plugin": "^2.24.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "node-sass": "^5.0.0",
     "postcss": "^8.2.15",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rollup": "^2.53.2",
+    "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-typescript2": "^0.30.0",
+    "sass-loader": "^10.1.1",
     "tailwindcss": "^2.0.0",
-    "ts-jest": "^26.3.0",
+    "ts-jest": "^26.4.4",
     "ts-loader": "^9.2.3",
     "typescript": "^4.3.5",
-    "webpack": "^5.1.3",
-    "webpack-cli": "^4.7.2"
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-middleware": "^3.7.3",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
     "lodash.merge": "^4.6.2"
   }
 }

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 
-import {Cluster as ClusterComponent} from '../layouts/Cluster';
-import {Box} from '../layouts/Box';
+import {Cluster as ClusterComponent} from '../Cluster/Cluster';
+import {Box} from '../Box/Box';
 
 export default {
   title: 'Layouts/Cluster',
@@ -24,7 +24,9 @@ Cluster.args = {
     <>
       {arr.map((width, i) => (
         <Box padding={2} key={i}>
-          <p className={`w-${width * 4} text-center`}>{i}</p>
+          <p className={`w-${width * 4} text-center`}>
+            {i}
+          </p>
         </Box>
       ))}
     </>

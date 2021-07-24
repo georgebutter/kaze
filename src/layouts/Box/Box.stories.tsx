@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 
-import {Box as BoxComponent} from '../layouts/Box';
+import {Box as BoxComponent} from './Box';
 
 export default {
   title: 'Layouts/Box',

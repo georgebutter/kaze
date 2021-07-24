@@ -11,11 +11,15 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx"
+  ],
   "exclude": [
     "node_modules",
     "build",
-    "src/**/*.stories.tsx",
-    "src/**/*.test.tsx"
   ]
 }

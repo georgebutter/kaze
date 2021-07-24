@@ -12,7 +12,7 @@ export const KazeContext = React.createContext<KazeContextState>({
  * Pass you custom theme to have it applied across all components.
  * @return {React.FC<Props>}
  */
-export const KazeProvider: React.FC<Props> = ({children, theme}) => (
+export const Kaze: React.FC<Props> = ({children, theme}) => (
   <KazeContext.Provider value={{theme}}>
     {children}
   </KazeContext.Provider>

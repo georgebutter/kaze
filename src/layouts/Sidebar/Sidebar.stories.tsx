@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 
-import {Sidebar as SidebarComponent} from '../layouts/Sidebar/Sidebar';
-import {SidebarSide} from '../layouts/Sidebar/SidebarSide';
-import {SidebarMain} from '../layouts/Sidebar/SidebarMain';
+import {Sidebar as SidebarComponent} from './Sidebar';
+import {SidebarSide} from './SidebarSide';
+import {SidebarMain} from './SidebarMain';
 
 export default {
   title: 'Layouts',

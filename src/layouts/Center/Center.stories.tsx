@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 
-import {Center as CenterComponent} from '../layouts/Center';
-import {VStack} from '../layouts/VStack';
-import {Box} from '../layouts/Box';
+import {Center as CenterComponent} from './Center';
+import {VStack} from '../VStack/VStack';
+import {Box} from '../Box/Box';
 
 export default {
   title: 'Layouts/Center',

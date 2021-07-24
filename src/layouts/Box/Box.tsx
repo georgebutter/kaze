@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {KazeContext} from '../providers/Kaze';
+import {DefaultProps} from '../../kaze';
+import {KazeContext} from '../../providers/Kaze';
 
 /**
  * Returns a Box component which, by the design philosophy should always
@@ -9,31 +10,21 @@ import {KazeContext} from '../providers/Kaze';
  * @return {React.FC<Props>}
  */
 export const Box: React.FC<Props> = ({
-  children, padding = 0, className = '',
+  children, padding = 0, className = '', as = 'div',
 }) => {
   const {theme} = React.useContext(KazeContext);
   const base = `p-${padding} m-0 w-auto`;
   const classes = `${theme.components.Box?.base || ''} ${className || ''} ${base}`;
-  return (
-    <div
-      className={classes}
-    >
-      {children}
-    </div>
-  );
+  return React.createElement(as, {
+    className: classes,
+  }, children);
 };
 
-type Props = {
+type Props = DefaultProps & {
   /**
    * The amount of horizontal spacing between elements in the stack.
    * Value is based upon the tailwind config.
    * Default is 0;
    **/
   padding?: number;
-  /**
-   * Additional classNames to apply to the element,
-   * only use this prop if this is a one off scenario otherwise use the
-   * Kaze theme context.
-   */
-  className?: string;
 }
