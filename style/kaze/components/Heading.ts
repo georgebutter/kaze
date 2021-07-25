@@ -1,5 +1,5 @@
 export default {
-  base: 'max-w-prose font-bold',
+  base: 'font-bold',
   variants: {
     red: 'text-red-400',
     blue: 'text-blue-400',

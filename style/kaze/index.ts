@@ -10,6 +10,7 @@ import Reel from './components/Reel';
 import Sidebar from './components/Sidebar';
 import SidebarSide from './components/SidebarSide';
 import SidebarMain from './components/SidebarMain';
+import Text from './components/Text';
 import VStack from './components/VStack';
 
 export default {
@@ -26,6 +27,7 @@ export default {
     Sidebar,
     SidebarMain,
     SidebarSide,
+    Text,
     VStack,
   },
 };

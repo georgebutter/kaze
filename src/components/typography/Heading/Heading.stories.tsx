@@ -2,7 +2,6 @@ import * as React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 
 import {Heading as HeadingComponent} from '@typography/Heading/Heading';
-import {Center} from '@layouts/Center/Center';
 
 export default {
   title: 'Typography/Heading',
@@ -12,10 +11,6 @@ export default {
       name: 'Variant',
       defaultValue: 'red'
     },
-    size: {
-      name: 'Size',
-      defaultValue: 'h2'
-    }
   },
 } as ComponentMeta<typeof HeadingComponent>;
 

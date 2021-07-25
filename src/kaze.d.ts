@@ -12,6 +12,7 @@ export type KazeTheme = {
     Sidebar?: KazeThemeComponent
     SidebarMain?: KazeThemeComponent
     SidebarSide?: KazeThemeComponent
+    Text?: KazeTypographyComponent
     VStack?: KazeThemeComponent
   }
 }
