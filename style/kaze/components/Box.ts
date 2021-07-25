@@ -1,5 +1,5 @@
 export default {
-  base: 'rounded text-white font-semibold',
+  base: 'rounded bg-blue-400 text-white font-semibold',
   variants: {
     red: 'bg-red-400',
     blue: 'bg-blue-400',

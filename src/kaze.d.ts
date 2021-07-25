@@ -6,6 +6,7 @@ export type KazeTheme = {
     Cluster?: KazeThemeComponent
     Cover?: KazeThemeComponent
     Grid?: KazeThemeComponent
+    Heading?: KazeTypographyComponent
     HStack?: KazeThemeComponent
     Reel?: KazeThemeComponent
     Sidebar?: KazeThemeComponent
@@ -19,6 +20,10 @@ export type KazeThemeComponent = {
   base?: string;
   variants?: Record<string, string>;
 };
+
+export type KazeTypographyComponent = KazeThemeComponent & {
+  sizes?: Record<string, string>
+}
 
 export type DefaultProps = {
   /**

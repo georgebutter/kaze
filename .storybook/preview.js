@@ -1,5 +1,5 @@
 import "../style/output.css";
-import { Kaze } from "../src/providers/Kaze";
+import { Kaze } from "../src/components/providers/Kaze";
 import theme from "../style/kaze/index";
 
 export const parameters = {

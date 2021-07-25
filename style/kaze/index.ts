@@ -4,6 +4,7 @@ import Center from './components/Center';
 import Cluster from './components/Cluster';
 import Cover from './components/Cover';
 import Grid from './components/Grid';
+import Heading from './components/Heading';
 import HStack from './components/HStack';
 import Reel from './components/Reel';
 import Sidebar from './components/Sidebar';
@@ -19,6 +20,7 @@ export default {
     Cluster,
     Cover,
     Grid,
+    Heading,
     HStack,
     Reel,
     Sidebar,

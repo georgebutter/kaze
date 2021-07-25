@@ -9,7 +9,14 @@
     "jsx": "react",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@layouts/*": ["components/layouts/*"],
+      "@providers/*": ["components/providers/*"],
+      "@typography/*": ["components/typography/*"],
+      "@types": ["kaze.d.ts"]
+    },
   },
   "include": [
     "src/**/*.ts",
