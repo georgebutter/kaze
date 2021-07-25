@@ -14,6 +14,10 @@ export default {
         'The amount of vertical spacing between elements in the stack.',
       defaultValue: 2,
     },
+    variant: {
+      name: 'Variant',
+      defaultValue: 'purple'
+    }
   },
 } as ComponentMeta<typeof HStackComponent>;
 

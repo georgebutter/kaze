@@ -1,3 +1,8 @@
 export default {
-  base: 'rounded bg-red-400 text-white font-semibold',
+  base: 'rounded text-white font-semibold',
+  variants: {
+    red: 'bg-red-400',
+    blue: 'bg-blue-400',
+    purple: 'bg-purple-400'
+  }
 };

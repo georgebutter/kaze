@@ -1,5 +1,6 @@
 import AspectRatio from './components/AspectRatio';
 import Box from './components/Box';
+import Center from './components/Center';
 import Cluster from './components/Cluster';
 import Cover from './components/Cover';
 import Grid from './components/Grid';
@@ -14,6 +15,7 @@ export default {
   components: {
     AspectRatio,
     Box,
+    Center,
     Cluster,
     Cover,
     Grid,

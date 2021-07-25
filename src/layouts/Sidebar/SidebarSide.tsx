@@ -3,10 +3,11 @@ import {DefaultProps} from '../../kaze';
 import {KazeContext} from '../../providers/Kaze';
 
 export const SidebarSide: React.FC<Props> = ({
-  children, className, as = 'aside',
+  children, className, as = 'aside', variant
 }) => {
   const {theme} = React.useContext(KazeContext);
-  const classes = `${theme.components.SidebarSide?.base || ''} ${className || ''} flex-grow`;
+  const { SidebarSide } = theme.components
+  const classes = `${SidebarSide?.base || ''} ${SidebarSide?.variants?.[variant] || ''} ${className || ''} flex-grow`;
   return React.createElement(as, {
     className: classes,
   }, children);

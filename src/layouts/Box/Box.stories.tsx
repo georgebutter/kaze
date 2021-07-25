@@ -7,6 +7,10 @@ export default {
   title: 'Layouts/Box',
   component: BoxComponent,
   argTypes: {
+    variant: {
+      name: 'Variant',
+      defaultValue: 'blue'
+    },
     padding: {
       name: 'Padding',
       description:

@@ -8,11 +8,12 @@ import {KazeContext} from '../../providers/Kaze';
  * @return {React.FC<Props>}
  */
 export const VStack: React.FC<Props> = ({
-  children, className = '', as = 'div', space = 0,
+  children, className = '', as = 'div', variant, space = 0,
 }) => {
   const {theme} = React.useContext(KazeContext);
+  const { VStack } = theme.components
   const base = `flex flex-col space-y-${space}`;
-  const classes = `${theme.components.VStack?.base || ''} ${className || ''} ${base}`;
+  const classes = `${VStack?.base || ''} ${VStack?.variants?.[variant] || ''} ${className || ''} ${base}`;
   return React.createElement(as, {
     className: classes,
   }, children);

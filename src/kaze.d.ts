@@ -17,6 +17,7 @@ export type KazeTheme = {
 
 export type KazeThemeComponent = {
   base?: string;
+  variants?: Record<string, string>;
 };
 
 export type DefaultProps = {
@@ -25,11 +26,15 @@ export type DefaultProps = {
    * only use this prop if this is a one off scenario otherwise use the
    * Kaze theme context.
    */
-    className?: string;
-    /**
-    * Choose the html element type to use. default is div
-    */
-    as?: string;
+  className?: string;
+  /**
+   * Choose the html element type to use. default is div
+   */
+  as?: string;
+  /**
+   * Choose which variant of the component to use. You can define variants in the theme config
+   */
+  variant?: string;
 }
 
 export type Spacings = 0 | 0.5 | 1 | 2 | 2.5 | 3 | 3.5 | 4 | 5;

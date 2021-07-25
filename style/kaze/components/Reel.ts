@@ -1,4 +1,10 @@
 /* eslint-disable max-len */
 export default {
-  base: 'rounded bg-purple-200 bg-stripes bg-1',
+  base: 'rounded bg-stripes bg-1',
+  variants: {
+    red: 'bg-red-400',
+    blue: 'bg-blue-400',
+    purple: 'bg-purple-400',
+    green: 'bg-green-400'
+  }
 };

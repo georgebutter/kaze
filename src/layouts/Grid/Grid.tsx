@@ -13,11 +13,12 @@ import {KazeContext} from '../../providers/Kaze';
  * @return {React.FC<Props>}
  */
 export const Grid: React.FC<Props> = ({
-  children, className, as = 'div', gap = 2, cols = 'auto250',
+  children, className, as = 'div', variant, gap = 2, cols = 'auto250',
 }) => {
   const {theme} = React.useContext(KazeContext);
+  const {Grid} = theme.components;
   const base = `grid grid-cols-${cols} gap-${gap}`;
-  const classes = `${theme.components.Grid?.base || ''} ${className || ''} ${base}`;
+  const classes = `${Grid?.base || ''} ${Grid?.variants?.[variant] || ''} ${className || ''} ${base}`;
   return React.createElement(as, {
     className: classes,
   }, children);

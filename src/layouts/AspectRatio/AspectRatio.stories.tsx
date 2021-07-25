@@ -9,6 +9,10 @@ export default {
   title: 'Layouts/AspectRatio',
   component: AspectRatioComponent,
   argTypes: {
+    variant: {
+      name: 'Variant',
+      defaultValue: 'blue'
+    }
   },
 } as ComponentMeta<typeof AspectRatioComponent>;
 
@@ -18,7 +22,7 @@ const AspectRatioStory: ComponentStory<
 > = (args) => (
   <Center width="sm">
     <AspectRatioComponent {...args}>
-      <img src={image} />
+      <img src={image} className="opacity-50" />
     </AspectRatioComponent>
   </Center>
 );

@@ -3,11 +3,12 @@ import {DefaultProps, MaxWidths, Spacings} from '../../kaze';
 import {KazeContext} from '../../providers/Kaze';
 
 export const Center: React.FC<Props> = ({
-  children, className, width = 'none', padding = 0, as = 'div',
+  children, className, variant, width = 'none', padding = 0, as = 'div',
 }) => {
   const {theme} = React.useContext(KazeContext);
+  const {Center} = theme.components
   const base = `box-content max-w-${width} mx-auto px-${padding} flex flex-col`;
-  const classes = `${theme.components.Center?.base || ''} ${className || ''} ${base}`;
+  const classes = `${Center?.base || ''} ${Center?.variants?.[variant] || ''} ${className || ''} ${base}`;
   return React.createElement(as, {
     className: classes,
   }, children);

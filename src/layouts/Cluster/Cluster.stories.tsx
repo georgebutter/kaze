@@ -8,6 +8,16 @@ export default {
   title: 'Layouts/Cluster',
   component: ClusterComponent,
   argTypes: {
+    gap: {
+      name: 'Gap',
+      description:
+        'The amount of spacing between elements in the cluster.',
+      defaultValue: 2,
+    },
+    variant: {
+      name: 'Variant',
+      defaultValue: 'purple'
+    }
   },
 } as ComponentMeta<typeof ClusterComponent>;
 
@@ -16,16 +26,27 @@ const ClusterStory: ComponentStory<typeof ClusterComponent> = (args) => (
   <ClusterComponent {...args} />
 );
 
-const arr = [2, 6, 4, 8, 2, 10, 1, 5, 2, 7, 4, 3];
+const arr = [
+  'Lorem ipsum dolor sit amet.',
+  'Bibendum est ultricies integer quis auctor.',
+  'Enim sit amet venenatis urna cursus eget nunc scelerisque viverra.',
+  'Fames ac turpis egestas maecenas pharetra.',
+  'Odio ut sem nulla pharetra diam sit amet nisl suscipit.',
+  'Commodo quis imperdiet massa tincidunt nunc.',
+  'Massa placerat duis ultricies lacus sed turpis tincidunt.',
+  'Id diam maecenas ultricies mi eget.',
+  'Proin nibh nisl condimentum id. Mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing.',
+  'Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc.',
+];
 
 export const Cluster = ClusterStory.bind({});
 Cluster.args = {
   children: (
     <>
-      {arr.map((width, i) => (
+      {arr.map((content, i) => (
         <Box padding={2} key={i}>
-          <p className={`w-${width * 4} text-center`}>
-            {i}
+          <p>
+            {content}
           </p>
         </Box>
       ))}

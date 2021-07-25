@@ -8,6 +8,10 @@ export default {
   title: 'Layouts/Grid',
   component: GridComponent,
   argTypes: {
+    variant: {
+      name: 'Variant',
+      defaultValue: 'purple'
+    }
   },
 } as ComponentMeta<typeof GridComponent>;
 

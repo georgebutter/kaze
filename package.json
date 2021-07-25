@@ -14,7 +14,7 @@
     "build:tailwind": "tailwindcss build -i style/tailwind.css -o style/output.css -c style/tailwind.config.js",
     "build:storybook": "build-storybook",
     "build": "rollup -c",
-    "test": "jest",
+    "test": "eslint",
     "prestorybook": "npm run build:tailwind",
     "dev": "start-storybook -p 1337",
     "prepublish": "npm run build"

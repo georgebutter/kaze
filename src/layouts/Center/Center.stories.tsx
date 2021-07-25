@@ -9,6 +9,10 @@ export default {
   title: 'Layouts/Center',
   component: CenterComponent,
   argTypes: {
+    variant: {
+      name: 'Variant',
+      defaultValue: 'purple'
+    },
     width: {
       name: 'Max width',
       description:
