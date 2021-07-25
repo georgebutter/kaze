@@ -1,6 +1,6 @@
 {
   "name": "kaze-ui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "React tailwind UI components",
   "main": "build/index.js",
   "module": "build/index.esm.js",
@@ -13,11 +13,11 @@
   "scripts": {
     "build:tailwind": "tailwindcss build -i style/tailwind.css -o style/output.css -c style/tailwind.config.js",
     "build:storybook": "build-storybook",
-    "build": "rollup -c",
+    "build": "yarn build:tailwind && rollup -c",
     "test": "eslint",
-    "prestorybook": "npm run build:tailwind",
+    "prestorybook": "yarn build:tailwind",
     "dev": "start-storybook -p 1337",
-    "prepublish": "npm run build"
+    "prepublish": "yarn build"
   },
   "keywords": [
     "react",
