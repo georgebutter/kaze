@@ -24,7 +24,18 @@ export default {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({useTsconfigDeclarationDir: true}),
+    typescript({
+      typescript: require('ttypescript'),
+      tsconfigDefaults: {
+        compilerOptions: {
+          plugins: [
+            { "transform": "typescript-transform-paths" },
+            { "transform": "typescript-transform-paths", "afterDeclarations": true }
+          ]
+        }
+      },
+      useTsconfigDeclarationDir: true
+    }),
     postcss(),
   ],
 };

@@ -35,11 +35,12 @@ module.exports.kaze = (config) => {
     },
   };
   const merged = merge(kazeConfig, config)
-  console.log(merged)
   return merged;
 };
 
 const getSafeList = () => [
+  // Box model
+  'box-content',
   // Aspect ratios
   ...getAspects('aspect-h'),
   ...getAspects('aspect-w'),
@@ -83,6 +84,7 @@ const getSafeList = () => [
   'justify-between',
   // Margins
   'm-0',
+  'mx-auto',
   // Max widths
   'max-w-0',
   'max-w-none',

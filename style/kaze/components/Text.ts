@@ -1,5 +1,5 @@
 export default {
-  base: 'max-w-prose',
+  base: '',
   variants: {
     black: 'text-black',
     red: 'text-red-400',

@@ -17,7 +17,7 @@ module.exports = kaze({
         );`,
       }),
       backgroundSize: {
-        1: '0.3rem 0.3rem',
+        1: '0.5rem 0.5rem',
       },
     },
   },
