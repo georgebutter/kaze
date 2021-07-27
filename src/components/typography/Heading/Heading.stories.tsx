@@ -11,6 +11,10 @@ export default {
       name: 'Variant',
       defaultValue: 'red'
     },
+    size: {
+      name: 'Size',
+      defaultValue: 'h2'
+    }
   },
 } as ComponentMeta<typeof HeadingComponent>;
 
