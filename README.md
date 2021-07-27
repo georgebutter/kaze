@@ -45,10 +45,12 @@ ReactDOM.render(
 
 Here is an example `styles` directory. In this example we will style the `Box` component
 
-|\* [components/](./styles/components)
-
-- [Box.ts](./styles/components/Box.ts)
-- [index.ts](./styles/index.ts)
+```
+styles/
+┣ components/
+┃ ┗ Box.ts
+┗ index.ts
+```
 
 Export the Box component from `styles/index.ts`
 
