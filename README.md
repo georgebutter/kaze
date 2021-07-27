@@ -104,7 +104,7 @@ import { Box } from 'kaze-ui';
 
 const IndexPage: React.FC<Props> = () => {
   return (
-    <Box>
+    <Box variant="purple">
       Test Box component
     </Box>
   );
