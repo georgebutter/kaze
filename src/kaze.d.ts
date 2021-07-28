@@ -2,6 +2,7 @@ export type KazeTheme = {
   components: {
     AspectRatio?: KazeThemeComponent
     Box?: KazeThemeComponent
+    Button?: KazeThemeComponent
     Center?: KazeThemeComponent
     Cluster?: KazeThemeComponent
     Cover?: KazeThemeComponent

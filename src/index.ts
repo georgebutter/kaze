@@ -1,5 +1,7 @@
 export * from '@providers/Kaze';
 
+export * from '@forms/Button/Button';
+
 export * from '@layouts/AspectRatio/AspectRatio';
 export * from '@layouts/Box/Box';
 export * from '@layouts/Center/Center';

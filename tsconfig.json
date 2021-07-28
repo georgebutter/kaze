@@ -15,6 +15,7 @@
       "@layouts/*": ["components/layouts/*"],
       "@providers/*": ["components/providers/*"],
       "@typography/*": ["components/typography/*"],
+      "@forms/*": ["components/forms/*"],
       "@types": ["kaze.d.ts"]
     },
     "plugins": [
