@@ -8,18 +8,27 @@ import {KazeContext} from '@providers/Kaze';
  * @return {React.FC<Props>}
  */
 export const Cover: React.FC<Props> = ({
-  children, as = 'div', className = '', variant, padding = 0,
+  children,
+  as = 'div',
+  className = '',
+  variant,
+  padding = 0,
 }) => {
   const {theme} = React.useContext(KazeContext);
   const {Cover} = theme.components;
   const base = `flex flex-col min-h-screen p-${padding} justify-between`;
-  const classes = `${Cover?.base || ''} ${Cover?.variants?.[variant] || ''} ${className || ''} ${base}`;
-  return React.createElement(as, {
-    className: classes,
-  }, children);
+  const classes = `${Cover?.base || ''} ${Cover?.variants?.[variant] || ''} ${
+    className || ''
+  } ${base}`;
+  return React.createElement(
+      as,
+      {
+        className: classes,
+      },
+      children,
+  );
 };
 
-type Props = DefaultProps & {
+type Props = DefaultProps<HTMLDivElement> & {
   padding?: number;
-}
-
+};

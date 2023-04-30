@@ -8,22 +8,32 @@ import {KazeContext} from '@providers/Kaze';
  * @return {React.FC<Props>}
  */
 export const VStack: React.FC<Props> = ({
-  children, className = '', as = 'div', variant, space = 0,
+  children,
+  className = '',
+  as = 'div',
+  variant,
+  space = 0,
 }) => {
   const {theme} = React.useContext(KazeContext);
-  const { VStack } = theme.components
+  const {VStack} = theme.components;
   const base = `flex flex-col space-y-${space}`;
-  const classes = `${VStack?.base || ''} ${VStack?.variants?.[variant] || ''} ${className || ''} ${base}`;
-  return React.createElement(as, {
-    className: classes,
-  }, children);
+  const classes = `${VStack?.base || ''} ${VStack?.variants?.[variant] || ''} ${
+    className || ''
+  } ${base}`;
+  return React.createElement(
+      as,
+      {
+        className: classes,
+      },
+      children,
+  );
 };
 
-type Props = DefaultProps & {
+type Props = DefaultProps<HTMLDivElement> & {
   /**
    * The amount of vertical spacing between elements in the stack.
    * Value is based upon the tailwind config.
    * Default is 0;
    **/
   space?: number;
-}
+};

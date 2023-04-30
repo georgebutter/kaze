@@ -8,6 +8,7 @@ import Grid from './components/Grid';
 import Heading from './components/Heading';
 import HStack from './components/HStack';
 import Reel from './components/Reel';
+import Select from './components/Select';
 import Sidebar from './components/Sidebar';
 import SidebarSide from './components/SidebarSide';
 import SidebarMain from './components/SidebarMain';
@@ -26,6 +27,7 @@ export default {
     Heading,
     HStack,
     Reel,
+    Select,
     Sidebar,
     SidebarMain,
     SidebarSide,

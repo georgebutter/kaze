@@ -10,17 +10,29 @@ import {KazeContext} from '@providers/Kaze';
  * @return {React.FC<Props>}
  */
 export const Box: React.FC<Props> = ({
-  children, padding = 0, className = '', as = 'div', variant,
-}) => {
+  children,
+  padding = 0,
+  className = '',
+  as = 'div',
+  variant,
+  ...props
+}): React.ReactElement => {
   const {theme} = React.useContext(KazeContext);
-  const {Box} = theme.components;
+  const {Box} = theme?.components;
   const base = `p-${padding} m-0 w-auto`;
-  const classes = `${Box?.base || ''} ${Box?.variants?.[variant] || ''} ${className || ''} ${base}`;
-  return React.createElement(as, {
-    className: classes,
-  }, children);
+  const classes = `${Box?.base || ''} ${Box?.variants?.[variant] || ''} ${
+    className || ''
+  } ${base}`;
+  return React.createElement(
+      as,
+      {
+        ...props,
+        className: classes,
+      },
+      children,
+  );
 };
 
-type Props = DefaultProps & {
-  padding: Spacings
-}
+type Props = DefaultProps<HTMLDivElement> & {
+  padding?: Spacings;
+};

@@ -8,22 +8,32 @@ import {KazeContext} from '@providers/Kaze';
  * @return {React.FC<Props>}
  */
 export const HStack: React.FC<Props> = ({
-  children, space = 0, className = '', as = 'div', variant
+  children,
+  space = 0,
+  className = '',
+  as = 'div',
+  variant,
 }) => {
   const {theme} = React.useContext(KazeContext);
-  const {HStack} = theme.components
+  const {HStack} = theme.components;
   const base = `flex flex-row space-x-${space}`;
-  const classes = `${HStack?.base || ''} ${HStack?.variants?.[variant] || ''} ${className || ''} ${base}`;
-  return React.createElement(as, {
-    className: classes,
-  }, children);
+  const classes = `${HStack?.base || ''} ${HStack?.variants?.[variant] || ''} ${
+    className || ''
+  } ${base}`;
+  return React.createElement(
+      as,
+      {
+        className: classes,
+      },
+      children,
+  );
 };
 
-type Props = DefaultProps & {
+type Props = DefaultProps<HTMLDivElement> & {
   /**
    * The amount of horizontal spacing between elements in the stack.
    * Value is based upon the tailwind config.
    * Default is 0;
    **/
   space?: GridCols;
-}
+};

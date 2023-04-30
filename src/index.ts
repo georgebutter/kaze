@@ -1,6 +1,7 @@
 export * from '@providers/Kaze';
 
 export * from '@forms/Button/Button';
+export * from '@forms/Select/Select';
 
 export * from '@layouts/AspectRatio/AspectRatio';
 export * from '@layouts/Box/Box';
@@ -14,7 +15,8 @@ export * from '@layouts/Sidebar/Sidebar';
 export * from '@layouts/Sidebar/SidebarSide';
 export * from '@layouts/Sidebar/SidebarMain';
 export * from '@layouts/VStack/VStack';
+export * from '@layouts/Flex/Flex';
 
 export * from '@typography/Heading/Heading';
-export * from '@typography/Text/Text';
-
+export * from '@typography/P/P';
+export * from '@typography/Span/Span';

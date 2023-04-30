@@ -41,7 +41,7 @@ ReactDOM.render(
 )
 ```
 
-4. (Optional) Extend the styles of the components.
+1. Extend the styles of the components.
 
 Here is an example `styles` directory. In this example we will style the `Box` component
 

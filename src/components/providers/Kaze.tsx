@@ -13,15 +13,13 @@ export const KazeContext = React.createContext<KazeContextState>({
  * @return {React.FC<Props>}
  */
 export const Kaze: React.FC<Props> = ({children, theme}) => (
-  <KazeContext.Provider value={{theme}}>
-    {children}
-  </KazeContext.Provider>
+  <KazeContext.Provider value={{theme}}>{children}</KazeContext.Provider>
 );
 
 type Props = {
-  theme: KazeContextState['theme']
-}
+  theme?: KazeContextState['theme'];
+};
 
 export type KazeContextState = {
-  theme: KazeTheme
-}
+  theme: KazeTheme;
+};

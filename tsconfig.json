@@ -10,13 +10,13 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "@layouts/*": ["components/layouts/*"],
-      "@providers/*": ["components/providers/*"],
-      "@typography/*": ["components/typography/*"],
-      "@forms/*": ["components/forms/*"],
-      "@types": ["kaze.d.ts"]
+      "@layouts/*": ["src/components/layouts/*"],
+      "@providers/*": ["src/components/providers/*"],
+      "@typography/*": ["src/components/typography/*"],
+      "@forms/*": ["src/components/forms/*"],
+      "@types": ["src/kaze.ts"]
     },
     "plugins": [
       { "transform": "typescript-transform-paths" },
@@ -26,7 +26,7 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
-    "src/**/*.tsx",
+    "src/**/**/*.tsx",
     "src/**/*.stories.tsx",
     "src/**/*.test.tsx"
   ],

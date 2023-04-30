@@ -8,20 +8,31 @@ import {KazeContext} from '@providers/Kaze';
  * @return {React.FC<Props>}
  */
 export const Cluster: React.FC<Props> = ({
-  children, className = '', variant, gap = 0, items = 'start', justify = 'start', as = 'div',
+  children,
+  className = '',
+  variant,
+  gap = 0,
+  items = 'start',
+  justify = 'start',
+  as = 'div',
 }) => {
   const {theme} = React.useContext(KazeContext);
   const {Cluster} = theme.components;
   const base = `flex flex-wrap gap-${gap} items-${items} justify-${justify}`;
-  const classes = `${Cluster?.base || ''} ${Cluster?.variants?.[variant] || ''} ${className || ''} ${base}`;
-  return React.createElement(as, {
-    className: classes,
-  }, children);
+  const classes = `${Cluster?.base || ''} ${
+    Cluster?.variants?.[variant] || ''
+  } ${className || ''} ${base}`;
+  return React.createElement(
+      as,
+      {
+        className: classes,
+      },
+      children,
+  );
 };
 
-type Props = DefaultProps & {
+type Props = DefaultProps<HTMLDivElement> & {
   gap?: Spacings;
   justify?: FlexAlignments;
   items?: FlexAlignments;
-}
-
+};

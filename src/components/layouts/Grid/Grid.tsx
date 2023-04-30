@@ -13,22 +13,33 @@ import {KazeContext} from '@providers/Kaze';
  * @return {React.FC<Props>}
  */
 export const Grid: React.FC<Props> = ({
-  children, className, as = 'div', variant, gap = 2, cols = 'auto250',
+  children,
+  className,
+  as = 'div',
+  variant,
+  gap = 2,
+  cols = 'auto250',
 }) => {
   const {theme} = React.useContext(KazeContext);
   const {Grid} = theme.components;
   const base = `grid grid-cols-${cols} gap-${gap}`;
-  const classes = `${Grid?.base || ''} ${Grid?.variants?.[variant] || ''} ${className || ''} ${base}`;
-  return React.createElement(as, {
-    className: classes,
-  }, children);
+  const classes = `${Grid?.base || ''} ${Grid?.variants?.[variant] || ''} ${
+    className || ''
+  } ${base}`;
+  return React.createElement(
+      as,
+      {
+        className: classes,
+      },
+      children,
+  );
 };
 
-type Props = DefaultProps & {
+type Props = DefaultProps<HTMLDivElement> & {
   /**
    * The grid-gap value i.e the spacing between grid items.
    * The value is as defined in your tailwind config.
    */
   gap?: Spacings;
   cols?: GridCols;
-}
+};
