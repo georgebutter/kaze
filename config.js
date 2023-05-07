@@ -1,17 +1,12 @@
-const merge = require('lodash.merge');
+const mergeWith = require('lodash/mergeWith');
 
 module.exports.kaze = (config) => {
-  if (Array.isArray(config.purge)) {
-    config.purge = {
-      content: config.purge
-    }
-  }
   const kazeConfig = {
-    darkMode: false,
-    purge: {
-      enabled: true,
-      safelist: getSafeList(),
-    },
+    darkMode: 'media',
+    content: [
+      './node_modules/kaze-ui/build/index.js',
+    ],
+    safelist: getSafeList(),
     plugins: [
       require('@tailwindcss/aspect-ratio'),
     ],
@@ -34,7 +29,14 @@ module.exports.kaze = (config) => {
       },
     },
   };
-  const merged = merge(kazeConfig, config)
+
+  // Deep merge arrays
+  const merged = mergeWith(kazeConfig, config, (obj, src) => {
+    if (Array.isArray(obj)) {
+      return obj.concat(src);
+    }
+  });
+
   return merged;
 };
 
@@ -149,6 +151,11 @@ const getSpacings = (prefix) => {
     '3.5',
     '4',
     '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
   ];
   return spacings.map((s) => `${prefix}-${s}`);
 };

@@ -13,6 +13,7 @@ export const Cover: React.FC<Props> = ({
   className = '',
   variant,
   padding = 0,
+  ...props
 }) => {
   const {theme} = React.useContext(KazeContext);
   const {Cover} = theme.components;
@@ -24,6 +25,7 @@ export const Cover: React.FC<Props> = ({
       as,
       {
         className: classes,
+        ...props,
       },
       children,
   );

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { KazeTypographyProps } from '@types';
-import { KazeContext } from '@providers/Kaze';
+import {KazeTypographyProps} from '@types';
+import {KazeContext} from '@providers/Kaze';
 
 /**
  * Returns a vertical stack component with an option for even spacing between
@@ -8,14 +8,15 @@ import { KazeContext } from '@providers/Kaze';
  * @return {React.FC<KazeTypographyProps>}
  */
 export const Heading: React.FC<KazeTypographyProps<HTMLHeadingElement>> = ({
-  children, className = '', as = 'h2', variant, size
+  children, className = '', as = 'h2', variant, size, ...props
 }) => {
-  const { theme } = React.useContext(KazeContext);
-  const { Heading } = theme.components
+  const {theme} = React.useContext(KazeContext);
+  const {Heading} = theme.components;
   const base = `max-w-prose`;
-  const classes = `${Heading?.base || ''} ${Heading?.variants?.[variant] || ''} ${Heading?.sizes?.[size] || ''} ${className || ''} ${base}`;
+  const classes = `${Heading?.base || ''} ${Heading?.variants?.[variant] || ''} ${Heading?.sizes?.[size] || ''} ${className || ''} ${base}`.trim();
   return React.createElement(as, {
     className: classes,
+    ...props,
   }, children);
 };
 
