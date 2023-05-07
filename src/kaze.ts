@@ -1,5 +1,4 @@
 
-import ThemeHeading from '../style/kaze/components/Heading';
 export type KazeTheme = {
   components: {
     AspectRatio?: KazeThemeComponent;
@@ -33,7 +32,7 @@ export type KazeTypographyComponent = KazeThemeComponent & {
 };
 
 export type KazeTypographyProps<T> = DefaultProps<T> & {
-  size?: keyof typeof ThemeHeading['sizes'];
+  size?: string;
 }
 
 
@@ -43,7 +42,8 @@ export type DefaultProps<ElementType> = {
    */
   as?: string;
   /**
-   * Choose which variant of the component to use. You can define variants in the theme config
+   * Choose which variant of the component to use.
+   * You can define variants in the theme config
    */
   variant?: string;
 } & React.HTMLAttributes<ElementType>;

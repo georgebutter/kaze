@@ -29,12 +29,11 @@ export default {
       tsconfigDefaults: {
         compilerOptions: {
           plugins: [
-            { "transform": "typescript-transform-paths" },
-            { "transform": "typescript-transform-paths", "afterDeclarations": true }
-          ]
-        }
+            {'transform': 'typescript-transform-paths'},
+            {'transform': 'typescript-transform-paths', 'afterDeclarations': true},
+          ],
+        },
       },
-      useTsconfigDeclarationDir: true
     }),
     postcss(),
   ],

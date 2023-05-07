@@ -16,9 +16,9 @@ export const Kaze: React.FC<Props> = ({children, theme}) => (
   <KazeContext.Provider value={{theme}}>{children}</KazeContext.Provider>
 );
 
-type Props = {
+type Props = React.PropsWithChildren<{
   theme?: KazeContextState['theme'];
-};
+}>;
 
 export type KazeContextState = {
   theme: KazeTheme;
