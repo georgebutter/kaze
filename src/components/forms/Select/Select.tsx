@@ -17,7 +17,9 @@ export const Select: React.FC<Props> = ({
   return (
     <select className={classes} {...props}>
       {options?.map((option) => (
-        <option value={option.value}>{option.label}</option>
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
       ))}
     </select>
   );
