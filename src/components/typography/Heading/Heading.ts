@@ -8,15 +8,13 @@ import {KazeContext} from '@providers/Kaze';
  * @return {React.FC<KazeTypographyProps>}
  */
 export const Heading: React.FC<KazeTypographyProps<HTMLHeadingElement>> = ({
-  children, className = '', as = 'h2', variant, size, ...props
+  children, className = '', as = 'h2', variant, size,
 }) => {
   const {theme} = React.useContext(KazeContext);
   const {Heading} = theme.components;
-  const base = `max-w-prose`;
-  const classes = `${Heading?.base || ''} ${Heading?.variants?.[variant] || ''} ${Heading?.sizes?.[size] || ''} ${className || ''} ${base}`.trim();
+  const classes = `${Heading?.base || ''} ${Heading?.variants?.[variant] || ''} ${Heading?.sizes?.[size] || ''} ${className || ''}`;
   return React.createElement(as, {
     className: classes,
-    ...props,
   }, children);
 };
 

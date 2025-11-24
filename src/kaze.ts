@@ -14,6 +14,7 @@ export type KazeTheme = {
     P?: KazeTypographyComponent;
     Reel?: KazeThemeComponent;
     Select?: KazeThemeComponent;
+    Checkbox?: KazeThemeComponent;
     Sidebar?: KazeThemeComponent;
     SidebarMain?: KazeThemeComponent;
     SidebarSide?: KazeThemeComponent;
