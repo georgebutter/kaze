@@ -1,7 +1,6 @@
 import * as React from 'react';
-import {DefaultProps} from '@types';
-import {KazeContext} from '@providers/Kaze';
-
+import type {DefaultProps} from '../../../types/index.ts';
+import {KazeContext} from '../../providers/Kaze.tsx';
 /**
  * Returns a horizontal overflow element with scrolling
  * @return {React.FC<Props>}

@@ -1,7 +1,6 @@
 import * as React from 'react';
-import {DefaultProps, FlexAlignments, Spacings} from '@types';
-import {KazeContext} from '@providers/Kaze';
-
+import type {DefaultProps, FlexAlignments, Spacings} from '../../../types/index.ts';
+import {KazeContext} from '../../providers/Kaze.tsx';
 /**
  * Returns a Cluster component which allows elements to be displayed in a
  * grid where the elements are different height or width.

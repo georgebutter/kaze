@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "vite.config.d.ts",
+  "sourceRoot": "",
+  "sources": [
+    "vite.config.ts"
+  ],
+  "names": [],
+  "mappings": ";AAQA,wBAqBG"
+}

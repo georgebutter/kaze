@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {KazeTypographyProps} from '@types';
-import {KazeContext} from '@providers/Kaze';
+import type {KazeTypographyProps} from '../../../types/index.ts';
+import {KazeContext} from '../../providers/Kaze.tsx';
 
 /**
  * Returns a vertical stack component with an option for even spacing between

@@ -1,23 +1,24 @@
-export * from '@providers/Kaze';
+export * from './components/providers/Kaze.tsx';
 
-export * from '@forms/Button/Button';
-export * from '@forms/Select/Select';
+export * from './components/forms/Button/Button.tsx';
+export * from './components/forms/Select/Select.tsx';
 
-export * from '@layouts/AspectRatio/AspectRatio';
-export * from '@layouts/Box/Box';
-export * from '@layouts/Center/Center';
-export * from '@layouts/Cluster/Cluster';
-export * from '@layouts/Cover/Cover';
-export * from '@layouts/Grid/Grid';
-export * from '@layouts/HStack/HStack';
-export * from '@layouts/Reel/Reel';
-export * from '@layouts/Sidebar/Sidebar';
-export * from '@layouts/Sidebar/SidebarSide';
-export * from '@layouts/Sidebar/SidebarMain';
-export * from '@layouts/VStack/VStack';
-export * from '@layouts/Flex/Flex';
+export * from './components/layouts/AspectRatio/AspectRatio.tsx';
+export * from './components/layouts/Box/Box.tsx';
+export * from './components/layouts/Center/Center.tsx';
+export * from './components/layouts/Cluster/Cluster.tsx';
+export * from './components/layouts/Cover/Cover.tsx';
+export * from './components/layouts/Grid/Grid.tsx';
+export * from './components/layouts/HStack/HStack.tsx';
+export * from './components/layouts/Reel/Reel.tsx';
+export * from './components/layouts/Sidebar/Sidebar.tsx';
+export * from './components/layouts/Sidebar/SidebarSide.tsx';
+export * from './components/layouts/Sidebar/SidebarMain.tsx';
+export * from './components/layouts/VStack/VStack.tsx';
+export * from './components/layouts/Flex/Flex.tsx';
 
-export * from '@typography/Heading/Heading';
-export * from '@typography/P/P';
-export * from '@typography/Span/Span';
+export * from './components/typography/Heading/Heading.tsx';
+export * from './components/typography/P/P.tsx';
+export * from './components/typography/Span/Span.tsx';
 
+export * from './components/ui/Tooltip/Tooltip.tsx';

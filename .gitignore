@@ -3,3 +3,4 @@ build
 style/output.css
 .DS_Store
 yarn-error.log
+dist

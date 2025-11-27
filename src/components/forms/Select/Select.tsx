@@ -1,6 +1,6 @@
 import React from 'react';
-import {KazeContext} from '@providers/Kaze';
-import {DefaultProps} from '@types';
+import type {DefaultProps} from '../../../types/index.ts';
+import {KazeContext} from '../../providers/Kaze.tsx';
 
 export const Select: React.FC<Props> = ({
   className,

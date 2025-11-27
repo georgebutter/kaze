@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {DefaultProps, MaxWidths, Spacings} from '@types';
-import {KazeContext} from '@providers/Kaze';
+import type {DefaultProps, MaxWidths, Spacings} from '../../../types/index.ts';
+import {KazeContext} from '../../providers/Kaze.tsx';
 
 export const Center: React.FC<Props> = ({
   children,

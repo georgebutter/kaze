@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {KazeTheme} from '@types';
+import type {KazeTheme} from '../../types/index.ts';
 
 export const KazeContext = React.createContext<KazeContextState>({
   theme: {

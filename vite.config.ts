@@ -1,15 +1,16 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import tsconfigPaths from 'vite-tsconfig-paths';
-import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
+
+
+
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  // resolve.alias removed
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: 'src/index.ts',
       name: 'KazeUI',
-      formats: ['es', 'cjs'],
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format) => `kaze.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -20,5 +21,7 @@ export default defineConfig({
         },
       },
     },
+    outDir: 'dist',
+    emptyOutDir: true,
   },
 });

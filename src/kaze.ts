@@ -20,6 +20,7 @@ export type KazeTheme = {
     SidebarSide?: KazeThemeComponent;
     Span?: KazeTypographyComponent;
     VStack?: KazeThemeComponent;
+    Tooltip?: KazeThemeComponent;
   };
 };
 

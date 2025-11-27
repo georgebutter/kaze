@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {DefaultProps, Spacings} from '@types';
-import {KazeContext} from '@providers/Kaze';
+import type {DefaultProps, Spacings} from '../../../types/index.ts';
+import {KazeContext} from '../../providers/Kaze.tsx';
 
 export const Sidebar: React.FC<Props> = ({
   children,

@@ -1,6 +1,6 @@
-import {KazeContext} from '@providers/Kaze';
-import {DefaultProps} from '@types';
 import React from 'react';
+import type {DefaultProps} from '../../../types/index.ts';
+import {KazeContext} from '../../providers/Kaze.tsx';
 
 export const Checkbox: React.FC<Props> = ({className, variant}) => {
   const {theme} = React.useContext(KazeContext);

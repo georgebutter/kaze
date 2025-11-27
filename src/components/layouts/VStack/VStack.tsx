@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {DefaultProps} from '@types';
-import {KazeContext} from '@providers/Kaze';
+import {KazeContext} from '../../providers/Kaze.tsx';
+import type { DefaultProps } from '../../../kaze.ts';
 
 /**
  * Returns a vertical stack component with an option for even spacing between

@@ -1,5 +1,3 @@
-const merge = require('lodash.merge');
-
 module.exports.kaze = (config) => {
   if (Array.isArray(config.purge)) {
     config.purge = {
@@ -12,9 +10,6 @@ module.exports.kaze = (config) => {
       enabled: true,
       safelist: getSafeList(),
     },
-    plugins: [
-      require('@tailwindcss/aspect-ratio'),
-    ],
     theme: {
       extend: {
         flexGrow: {
@@ -34,7 +29,10 @@ module.exports.kaze = (config) => {
       },
     },
   };
-  const merged = merge(kazeConfig, config);
+  const merged = {
+    ...kazeConfig,
+    ...config
+  };
   return merged;
 };
 

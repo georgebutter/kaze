@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {DefaultProps, GridCols, Spacings} from '@types';
-import {KazeContext} from '@providers/Kaze';
+import type {DefaultProps, GridCols, Spacings} from '../../../types/index.ts';
+import {KazeContext} from '../../providers/Kaze.tsx';
 
 /**
  * Returns a grid component.
