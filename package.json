@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "kaze-ui",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "React tailwind UI components",
   "module": "dist/kaze.es.js",
   "types": "dist/types/index.d.ts",
